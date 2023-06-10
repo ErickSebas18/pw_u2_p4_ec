@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,13 +8,42 @@
     <title>Directiva VFor</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
+
 <body>
     <header></header>
     <nav></nav>
     <section>
-        <div id="app2"></div>
+        <h1>Inicio</h1>
+        <div id="app2">
+            <h4>Estudiantes UCE</h4>
+            <input type="text" v-model="nombre" v-on:keypress.enter="agregarEstudiante2"><hr>
+            <h1>{{nombre}}</h1>
+            <h3>Lista Estudiantes</h3>
+            <!-- <ul>
+                 <li>{{miArreglo[0].nombre}}</li>
+                <li>{{miArreglo[1]}}</li>
+                <li>{{miArreglo[2]}}</li>
+                <li>{{miArreglo[3]}}</li>
+                <li>{{miArreglo[4]}}</li>
+                <li>{{miArreglo[5]}}</li>
+                <li>{{miArreglo[6]}}</li>
+                <li>{{miArreglo[7]}}</li>
+                <li>{{miArreglo[8]}}</li>
+                <li>{{miArreglo[9]}}</li> 
+            </ul> -->
+
+            <ul>
+                <!-- desestructurar un objeto -->
+                <li v-for="({nombre, apellido}, index) in miArreglo">
+                    <span>{{++index}} -- {{nombre}}&nbsp;</span>
+                    <span>{{apellido}}</span>
+                </li>
+            </ul>
+        </div>
+        <h1>Fin</h1>
     </section>
     <footer></footer>
     <script src="../js/vFor.js"></script>
 </body>
+
 </html>
