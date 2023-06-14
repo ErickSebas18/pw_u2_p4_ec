@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="../css/estiloFormulario.css">
+</head>
+
+<body>
+    <div class="container" id="app">
+        <div class="containerMenor">
+            <header>
+                <h2> Ingrese los datos </h2>
+            </header>
+    
+            <section>
+                <div class="formulario">
+                    <form action="https://api.com/persona" method="post">
+    
+                        <p type="Nombre" class="etiqueta">
+                            <input class="input" type="text" v-model="nombre" placeholder="Ingrese Nombre"
+                                v-bind="{name : fNombre}">
+                        </p>
+                        <p type="Apellido" class="etiqueta">
+                            <input class="input" type="text" v-model="apellido" placeholder="Ingrese Apellido"
+                                v-bind="{lastname : fApellido}">
+                        </p>
+                        <p type="Ciudad" class="etiqueta">
+                            <input class="input" type="text" v-model="ciudad" placeholder="Ingrese Ciudad"
+                                v-bind="{city : fCiudad}">
+                        </p>
+                        <p type="Género" class="etiqueta">
+                            <input class="input" type="text" v-model="genero" placeholder="Ingrese Género"
+                                v-bind="{gender : fGenero}">
+                        </p>
+                    </form>
+                    <button id="btn-Agregar" v-on:click="addPersona">Ingresar</button>
+                </div>
+            </section>
+        </div>
+        
+            <div class="listaPersonas">
+                <h3>Listado de Personas</h3>
+                <ul>
+                    <li v-for="{nombre, apellido, ciudad, genero} in myList">
+                        <span>-- {{nombre}}&nbsp;</span>
+                        <span>{{apellido}}&nbsp;</span>
+                        <span>--{{ciudad}}&nbsp;</span>
+                        <span>--{{genero}}&nbsp;</span>
+
+                    </li>
+                </ul>
+            </div>
+    </div>
+    
+    <script src="../js/formulario.js"></script>
+</body>
+
+</html>
