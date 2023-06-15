@@ -45,8 +45,8 @@
             <div class="listaPersonas">
                 <h3>Listado de Personas</h3>
                 <ul>
-                    <li v-for="{nombre, apellido, ciudad, genero} in myList">
-                        <span>-- {{nombre}}&nbsp;</span>
+                    <li v-for="({nombre, apellido, ciudad, genero}, index) in myList">
+                        <span>{{++index}}-- {{nombre}}&nbsp;</span>
                         <span>{{apellido}}&nbsp;</span>
                         <span>--{{ciudad}}&nbsp;</span>
                         <span>--{{genero}}&nbsp;</span>

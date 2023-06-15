@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Web</title>
+    <link rel="stylesheet" href="../css/calculadoraFinal.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <header class="cabecera">
+        <h1> Calculadora Web </h1>
+    </header>
+    <nav> </nav>
+    <section>
+        <div class="container" id="calcu">
+            <div class="calculadora">
+                <input class="resultado" id="idResultado" placeholder="0" readonly v-model="idResultado">
+                <button class="button" v-on:click="numero(1)"> 1 </button>
+                <button class="button" v-on:click="numero(2)"> 2 </button>
+                <button class="button" v-on:click="numero(3)"> 3 </button>
+                <button class="button" v-on:click="guardarOperacion('+')"> + </button>
+                <button class="button" v-on:click="numero(4)"> 4 </button>
+                <button class="button" v-on:click="numero(5)"> 5 </button>
+                <button class="button" v-on:click="numero(6)"> 6 </button>
+                <button class="button" v-on:click="guardarOperacion('-')"> - </button>
+                <button class="button" v-on:click="numero(7)"> 7 </button>
+                <button class="button" v-on:click="numero(8)"> 8 </button>
+                <button class="button" v-on:click="numero(9)"> 9 </button>
+                <button class="button" v-on:click="guardarOperacion('x')"> x </button>
+                <button class="buttonCero" v-on:click="resultado()"> 0 </button>
+                <button class="button" v-on:click="resultado()"> = </button>
+                <button class="button" v-on:click="guardarOperacion('/')"> / </button>
+
+            </div>
+        </div>
+
+    </section>
+    <footer></footer>
+    <script src="../js/calculadoraFinal.js"></script>
+</body>
+
+</html>

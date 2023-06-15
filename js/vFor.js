@@ -59,7 +59,6 @@ const app = Vue.createApp({
         console.log("presionó Enter");
         const nuevoEstudiante = {
           nombre: this.nombre,
-          apellido: "Apellido",
         };
         // Agregar al final
         this.miArreglo.push(nuevoEstudiante);
@@ -73,7 +72,6 @@ const app = Vue.createApp({
       console.log("presionó Enter");
         const nuevoEstudiante = {
           nombre: this.nombre,
-          apellido: "Apellido",
         };
         this.miArreglo.push(nuevoEstudiante);
     },

@@ -36,7 +36,9 @@
                 <!-- desestructurar un objeto -->
                 <li v-for="({nombre, apellido}, index) in miArreglo">
                     <span>{{++index}} -- {{nombre}}&nbsp;</span>
-                    <span>{{apellido}}</span>
+                    <!--No aparece el campo apellido ya que es false-->
+                    <span v-if="apellido!==undefined"> Apellido: {{apellido}}</span>
+                    <span v-show="apellido!==undefined"> Apellido: {{apellido}}</span>
                 </li>
             </ul>
         </div>

@@ -48,6 +48,7 @@ body{
 #btn-Agregar:hover{
     background-color: #204B6A;
     color: aliceblue;
+    cursor: pointer;
 }
 
 p:before{
